@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NeonCalc - JavaScript Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <div class="calculator">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div class="logo">
+                ⚡
+            </div>
+
+            <div>
+                <h1>NeonCalc</h1>
+                <p>Smart JavaScript Calculator</p>
+            </div>
+
+        </div>
+
+
+        <!-- Display -->
+        <div class="display">
+
+            <span id="expression">
+                Ready to calculate...
+            </span>
+
+            <h2 id="result">
+                0
+            </h2>
+
+        </div>
+
+
+        <!-- Number Inputs -->
+        <div class="inputs">
+
+            <div class="input-box">
+
+                <label for="num1">
+                    FIRST NUMBER
+                </label>
+
+                <input
+                    type="number"
+                    id="num1"
+                    placeholder="Enter number"
+                >
+
+            </div>
+
+
+            <div class="input-box">
+
+                <label for="num2">
+                    SECOND NUMBER
+                </label>
+
+                <input
+                    type="number"
+                    id="num2"
+                    placeholder="Enter number"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- Operators -->
+        <div class="operator-title">
+            SELECT OPERATION
+        </div>
+
+
+        <div class="operators">
+
+            <button
+                type="button"
+                class="operator active"
+                data-op="+">
+
+                <span>+</span>
+                <small>Add</small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="operator"
+                data-op="-">
+
+                <span>−</span>
+                <small>Subtract</small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="operator"
+                data-op="*">
+
+                <span>×</span>
+                <small>Multiply</small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="operator"
+                data-op="/">
+
+                <span>÷</span>
+                <small>Divide</small>
+
+            </button>
+
+        </div>
+
+
+        <!-- Calculate Button -->
+        <button
+            type="button"
+            class="calculate"
+            onclick="calculate()">
+
+            <span>Calculate</span>
+            <span>→</span>
+
+        </button>
+
+
+        <!-- History -->
+        <div class="history-header">
+
+            <span>
+                CALCULATION HISTORY
+            </span>
+
+            <button
+                type="button"
+                onclick="clearHistory()">
+
+                Clear
+
+            </button>
+
+        </div>
+
+
+        <div id="history" class="history">
+
+            <p class="empty">
+                No calculations yet
+            </p>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+
+            Built with HTML • CSS • JavaScript
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

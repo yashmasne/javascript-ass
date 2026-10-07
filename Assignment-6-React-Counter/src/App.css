@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #173f63,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #071f3a,
+            transparent 40%
+        ),
+        #050b14;
+
+    color: white;
+}
+
+
+/* Main container */
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Counter card */
+
+.counter {
+    width: 400px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #142d43;
+
+    border: 1px solid #31516a;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+/* Badge */
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    border: 1px solid #00d9ff;
+
+    background:
+        rgba(0, 217, 255, 0.08);
+
+    color: #00d9ff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Heading */
+
+.counter h1 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+
+    color: white;
+}
+
+
+.subtitle {
+    margin: 0 0 25px;
+
+    color: #8fa6ba;
+
+    font-size: 13px;
+}
+
+
+/* Count */
+
+.count {
+    width: 160px;
+
+    height: 160px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00d9ff,
+            #0066ff
+        );
+
+    border: 8px solid #0b1d2d;
+
+    outline: 3px solid #00cfff;
+
+    color: white;
+
+    font-size: 60px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 200, 255, 0.3);
+
+    transition: 0.2s;
+}
+
+
+.count:hover {
+    transform: scale(1.05);
+}
+
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Increment */
+
+.increment {
+    background:
+        linear-gradient(
+            135deg,
+            #00cfff,
+            #0066ff
+        );
+}
+
+
+/* Decrement */
+
+.decrement {
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #7c3aed
+        );
+}
+
+
+/* Reset */
+
+.reset {
+    background: #263e52;
+
+    border: 1px solid #3d5870;
+}
+
+
+.reset:hover {
+    background: #304b62;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #31516a;
+
+    color: #71869a;
+
+    font-size: 11px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .counter {
+        width: 100%;
+
+        max-width: 400px;
+
+        padding: 30px 20px;
+    }
+
+    .counter h1 {
+        font-size: 26px;
+    }
+
+    .count {
+        width: 140px;
+
+        height: 140px;
+
+        font-size: 50px;
+    }
+}

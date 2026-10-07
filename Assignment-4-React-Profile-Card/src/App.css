@@ -1,0 +1,270 @@
+.app {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* Heading */
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading span {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 20px;
+
+    border: 1px solid #00cfff;
+
+    color: #00cfff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.heading h1 {
+    margin: 0 0 8px;
+
+    color: white;
+
+    font-size: 34px;
+}
+
+.heading p {
+    margin: 0;
+
+    color: #9bb0c4;
+
+    font-size: 14px;
+}
+
+
+/* Profile Card */
+
+.profile-card {
+    width: 390px;
+
+    padding: 32px;
+
+    text-align: center;
+
+    background: #142d43;
+
+    border: 1px solid #31516a;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 65px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Profile Image */
+
+.profile-image {
+    width: 160px;
+
+    height: 160px;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #00cfff;
+
+    box-shadow:
+        0 0 25px rgba(0, 207, 255, 0.4);
+}
+
+
+/* Name */
+
+.profile-card h2 {
+    margin: 0 0 7px;
+
+    color: white;
+
+    font-size: 28px;
+}
+
+
+/* Role */
+
+.role {
+    margin: 0 0 16px;
+
+    color: #00d9ff;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* Description */
+
+.description {
+    margin: 0 auto 22px;
+
+    color: #b5c3cf;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Skills */
+
+.skills {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+}
+
+.skills span {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #0d344b;
+
+    border: 1px solid #246b82;
+
+    color: #a8edff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* Information */
+
+.info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 16px 5px;
+
+    margin-bottom: 22px;
+
+    border-top: 1px solid #31516a;
+
+    border-bottom: 1px solid #31516a;
+}
+
+.info div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.info strong {
+    color: white;
+
+    font-size: 14px;
+}
+
+.info small {
+    color: #7890a3;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* Button */
+
+.profile-card button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00cfff,
+            #0066ff
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.profile-card button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 180, 255, 0.3);
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .profile-card {
+        width: 100%;
+        max-width: 390px;
+
+        padding: 25px;
+    }
+
+    .heading h1 {
+        font-size: 28px;
+    }
+
+}

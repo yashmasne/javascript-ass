@@ -1,0 +1,684 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   BODY
+================================ */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #3b176d,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #005f73,
+            transparent 35%
+        ),
+
+        #080b16;
+
+    overflow-x: hidden;
+
+}
+
+
+/* ================================
+   ANIMATED BACKGROUND
+================================ */
+
+.background {
+
+    position: fixed;
+
+    width: 450px;
+
+    height: 450px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00f5ff,
+            #7b2cff,
+            #ff00cc
+        );
+
+    filter: blur(120px);
+
+    opacity: 0.20;
+
+    animation:
+        moveBackground 8s
+        infinite alternate
+        ease-in-out;
+
+    z-index: -1;
+
+}
+
+
+@keyframes moveBackground {
+
+    from {
+
+        transform:
+            translate(-200px, -150px);
+
+    }
+
+    to {
+
+        transform:
+            translate(200px, 150px);
+
+    }
+
+}
+
+
+/* ================================
+   CALCULATOR
+================================ */
+
+.calculator {
+
+    width: 430px;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(25px);
+
+    box-shadow:
+
+        0 25px 80px
+        rgba(0, 0, 0, 0.55),
+
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.10);
+
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.logo {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00f5ff,
+            #7b2cff
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 245, 255, 0.40);
+
+}
+
+
+.header h1 {
+
+    font-size: 26px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.header p {
+
+    color: #a9afc3;
+
+    font-size: 12px;
+
+}
+
+
+/* ================================
+   DISPLAY
+================================ */
+
+.display {
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 18px;
+
+    text-align: right;
+
+    background:
+        rgba(0, 0, 0, 0.30);
+
+}
+
+
+#expression {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8d94aa;
+
+    font-size: 13px;
+
+}
+
+
+#result {
+
+    font-size: 36px;
+
+    color: #00f5ff;
+
+    word-break: break-word;
+
+    text-shadow:
+        0 0 15px
+        rgba(0, 245, 255, 0.60);
+
+}
+
+
+/* ================================
+   INPUT AREA
+================================ */
+
+.inputs {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.input-box {
+
+    flex: 1;
+
+}
+
+
+.input-box label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #9ba3bc;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.input-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.25);
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+
+.input-box input::placeholder {
+
+    color: #666d80;
+
+}
+
+
+.input-box input:focus {
+
+    border-color: #00f5ff;
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 245, 255, 0.20);
+
+}
+
+
+/* ================================
+   OPERATOR TITLE
+================================ */
+
+.operator-title {
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    color: #9ba3bc;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ================================
+   OPERATOR BUTTONS
+================================ */
+
+.operators {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.operator {
+
+    padding: 12px 5px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+
+}
+
+
+.operator span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #b8c0d9;
+
+    font-size: 23px;
+
+}
+
+
+.operator small {
+
+    color: #777f96;
+
+    font-size: 9px;
+
+}
+
+
+.operator:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #00f5ff;
+
+}
+
+
+.operator.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 245, 255, 0.20),
+            rgba(123, 44, 255, 0.20)
+        );
+
+    border-color: #00f5ff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 245, 255, 0.15);
+
+}
+
+
+.operator.active span {
+
+    color: #00f5ff;
+
+}
+
+
+/* ================================
+   CALCULATE BUTTON
+================================ */
+
+.calculate {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00c6ff,
+            #7b2cff
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 198, 255, 0.20);
+
+    transition: all 0.25s ease;
+
+}
+
+
+.calculate:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 198, 255, 0.35);
+
+}
+
+
+.calculate:active {
+
+    transform: scale(0.98);
+
+}
+
+
+/* ================================
+   HISTORY HEADER
+================================ */
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+
+    color: #9ba3bc;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.history-header button {
+
+    border: none;
+
+    background: none;
+
+    color: #00f5ff;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+}
+
+
+.history-header button:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ================================
+   HISTORY
+================================ */
+
+.history {
+
+    max-height: 130px;
+
+    overflow-y: auto;
+
+}
+
+
+.history-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px;
+
+    margin-bottom: 6px;
+
+    border-radius: 9px;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #c5cad8;
+
+    font-size: 12px;
+
+}
+
+
+.history-item strong {
+
+    color: #00f5ff;
+
+}
+
+
+.empty {
+
+    padding: 15px;
+
+    color: #626a80;
+
+    text-align: center;
+
+    font-size: 12px;
+
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+
+    margin-top: 20px;
+
+    color: #555d72;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* ================================
+   RESULT ANIMATION
+================================ */
+
+.result-animation {
+
+    animation:
+        resultPop 0.35s ease;
+
+}
+
+
+@keyframes resultPop {
+
+    0% {
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 20px 0;
+
+    }
+
+
+    .calculator {
+
+        width: 92%;
+
+        padding: 20px;
+
+    }
+
+
+    .inputs {
+
+        flex-direction: column;
+
+    }
+
+}
